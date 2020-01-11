@@ -1,2 +1,16 @@
 server:
-  port: 8088
+  port: 8089
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+spring:
+  application:
+    name: springcloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:KivenBruce/springcloud-config.git
+#          uri: https://github.com/KivenBruce/springcloud-config
